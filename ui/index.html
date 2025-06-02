@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UZ Market - Your Digital Shopping Experience">
+    <title>UZ Market</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+    <div id="app" class="UZScripts" :style="isVisible ? {opacity: 1, pointerEvents:'all'} : {opacity: 0, pointerEvents:'none'}">
+        <div class="categorycont" :style="recent.length >= 1 ? {marginLeft: '0rem'} : {marginLeft: '11rem'}">
+            <div class="collab"></div>
+            <div class="header"><p>{{locale.category || 'Category'}}</p></div>
+            <div class="container">
+                <div class="allselect" @click="allselect" :style="{ background: selectedcategory === 'all' ? 'radial-gradient(50% 8.664rem at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1)' : ''}"><p :style="{color: selectedcategory === 'all' ? '#92FFA2' : ''}">{{locale.all || 'All'}}</p></div>
+                <div class="categories">
+                    <div class="category" @click="catagoryselect(category.type)" v-for="(category, index) in categories" :key="category" :style="{ background: selectedcategory === category.type ? '' : 'radial-gradient(50% 138.64% at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.05)', border: selectedcategory === category.type ? '' : '1px solid rgba(255, 255, 255, 0.1)'}">
+                        <div class="cont">
+                            <div class="img">
+                                <i :class="category.image" :style="{color: selectedcategory === category.type ? '' : 'rgba(255, 255, 255, 0.5)' }"></i>
+                            </div>
+                            <div class="text"><p :style="{color: selectedcategory === category.type ? '' : 'rgba(255, 255, 255, 0.5)' }">{{category.name}}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products" :style="recent.length >= 1 ? {marginLeft: '0rem'} : {marginLeft: '11rem'}">
+            <div class="header"><p>{{locale.product || 'Product'}}</p></div>
+            <div class="line"></div>
+            <div class="listcont">
+                <div class="slot" 
+                    v-for="item in filteredItems" 
+                    :key="item.name"
+                    @click="senditem(item)">
+                    <div class="price"><p>${{item.price}}</p></div>
+                    <div class="img" :style="{ backgroundImage: `url(${item.image})` }"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cartpay" :style="recent.length >= 1 ? {marginLeft: '0rem'} : {marginLeft: '11rem'}">
+            <div class="cartcont">
+                <div class="header"><p>{{locale.cart || 'Cart'}}</p></div>
+                <div class="line"></div>
+                <div class="itemcont">
+                    <div class="itemslos" v-if="cart.length >= 0" v-for="itemss in cart" @click="removeitem(itemss)">
+                        <!-- <div class="cancel" @click="removeitem(itemss)">
+                            <div class="svg"></div>
+                        </div> -->
+                        <div class="img" :style="{ backgroundImage: 'url('+ itemss.image +')'}"></div>
+                        <div class="name"><p>{{itemss.label}}</p></div>
+                        <div class="price"><p>${{itemss.price}}</p></div>
+                        <div class="amountof"><p>X{{itemss.amount}}</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pay">
+                <div class="line"></div>
+                <div class="header"><p>{{locale.pay || 'Pay'}}</p></div>
+                <div class="paycont">
+                    <div class="totaltext"><p>{{locale.total || 'Total Price'}}</p></div>
+                    <div class="amount"><p>${{ total }}</p></div>
+                    <div class="paycard" @click="payment('bank')"><p>{{locale.paycard || 'Pay with Card'}} ({{ paymentAccounts.bank }})</p></div>
+                    <div class="paycash" @click="payment('cash')"><p>{{locale.paycash || 'Pay with Cash'}} ({{ paymentAccounts.cash }})</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="recent" v-if="recent.length >= 1">
+            <div class="line"></div>
+            <div class="header"><p>{{locale.recent || 'Recent'}}</p></div>
+            <div class="list">
+                <div class="recentitem" v-if="recent.length >= 0" v-for="(recentitem, index) in recent">
+                    <div class="headerid">
+                        <p>{{locale.recentpurchase || 'Recent Purchase'}} {{index + 1}}</p>
+                    </div>  
+                    <div class="itemshow">
+                        <div class="items" v-if="recent.length >= 0" v-for="itemrec in recentitem" >
+                            <div class="name"><p>{{itemrec.name}}</p></div>
+                            <div class="amount"><p>X{{itemrec.amount}}</p></div>
+                        </div>
+                    </div>
+                    <div class="recent-item-actions">
+                        <div class="cart-icon" @click="addToCartFromRecent(recentitem)">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="up-arrow-icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vue2.js"></script>
+</body>
+</html>

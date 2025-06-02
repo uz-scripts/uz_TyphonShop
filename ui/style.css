@@ -1,0 +1,1097 @@
+@media screen and (width: 1920px) and (height: 1080px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+  html {
+    font-size: 21.35px;
+  }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+@media screen and (width: 7680px) and (height: 4320px) {
+  html {
+    font-size: 64px;
+  }
+}
+
+@media screen and (width: 1280px) and (height: 720px) {
+  html {
+    font-size: 10.7px;
+  }
+}
+
+@media screen and (width: 854px) and (height: 480px) {
+  html {
+    font-size: 7.15px;
+  }
+}
+
+@media screen and (width: 640px) and (height: 360px) {
+  html {
+    font-size: 5.35px;
+  }
+}
+
+@font-face {
+  font-family: gilroyl;
+  src: url(./font/Gilroy-Light.ttf);
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(./font/Gilroy-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  -webkit-transition: all .2 ease-in-out;
+  transition: all .2 ease-in-out;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.UZScripts {
+  opacity: 0;
+  overflow: hidden;
+  width: 120rem;
+  height: 67.5rem;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(38, 42, 60, 0.35)), color-stop(50%, rgba(34, 37, 48, 0.35)), to(rgba(34, 37, 48, 0.679))), -webkit-gradient(linear, left bottom, left top, from(rgba(38, 42, 60, 0.35)), color-stop(50%, rgba(34, 37, 48, 0.35)), to(rgba(34, 37, 48, 0.679))), -webkit-gradient(linear, right top, left top, from(rgba(38, 42, 60, 0.35)), color-stop(50%, rgba(34, 37, 48, 0.35)), to(rgba(34, 37, 48, 0.679))), -webkit-gradient(linear, left top, right top, from(rgba(38, 42, 60, 0.35)), color-stop(50%, rgba(34, 37, 48, 0.35)), to(rgba(34, 37, 48, 0.679))), rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, rgba(38, 42, 60, 0.35) 0%, rgba(34, 37, 48, 0.35) 50%, rgba(34, 37, 48, 0.679) 100%), linear-gradient(360deg, rgba(38, 42, 60, 0.35) 0%, rgba(34, 37, 48, 0.35) 50%, rgba(34, 37, 48, 0.679) 100%), linear-gradient(270deg, rgba(38, 42, 60, 0.35) 0%, rgba(34, 37, 48, 0.35) 50%, rgba(34, 37, 48, 0.679) 100%), linear-gradient(90deg, rgba(38, 42, 60, 0.35) 0%, rgba(34, 37, 48, 0.35) 50%, rgba(34, 37, 48, 0.679) 100%), rgba(0, 0, 0, 0.3);
+}
+
+.UZScripts .categorycont {
+  -webkit-transition: all .24s ease-in;
+  transition: all .24s ease-in;
+  position: absolute;
+  width: 7.75rem;
+  height: 30.75rem;
+  left: 21.6rem;
+  top: 18.35rem;
+}
+
+.UZScripts .categorycont .collab {
+  position: absolute;
+  width: 7.625rem;
+  height: 29.75rem;
+  left: 0.0625rem;
+  top: 0.9375rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.1);
+  border-radius: 0.3125rem;
+}
+
+.UZScripts .categorycont .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 5.4375rem;
+  height: 1.875rem;
+  left: 1.125rem;
+  top: 0rem;
+  background: radial-gradient(50% 8.664rem at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+}
+
+.UZScripts .categorycont .header > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: .2rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .categorycont .container {
+  position: absolute;
+  width: 5.625rem;
+  height: 26.875rem;
+  left: 1.0625rem;
+  top: 2.8125rem;
+}
+
+.UZScripts .categorycont .container .allselect {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 5.625rem;
+  height: 1.875rem;
+  left: 0rem;
+  top: 0rem;
+  background: radial-gradient(50% 8.664rem at 50% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.05);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.1875rem;
+}
+
+.UZScripts .categorycont .container .allselect > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0rem 0rem 0.625rem rgba(255, 255, 255, 0.2);
+  margin-top: .4rem;
+}
+
+.UZScripts .categorycont .container .categories {
+  position: absolute;
+  width: 5.625rem;
+  height: 24.375rem;
+  left: 0rem;
+  top: 2.5rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.UZScripts .categorycont .container .categories::-webkit-scrollbar {
+  display: none;
+}
+
+.UZScripts .categorycont .container .categories .category {
+  -webkit-transition: all .17s ease-in;
+  transition: all .17s ease-in;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 5.625rem;
+  height: 5.625rem;
+  left: 0rem;
+  top: -0.625rem;
+  background: radial-gradient(50% 8.664rem at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+  margin-top: 0.625rem;
+}
+
+.UZScripts .categorycont .container .categories .category:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.UZScripts .categorycont .container .categories .category .cont {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 1.25rem;
+  left: 1.25rem;
+}
+
+.UZScripts .categorycont .container .categories .category .cont .img {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: .8rem;
+  top: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.UZScripts .categorycont .container .categories .category .cont .img > i {
+  font-size: 1.5rem;
+  color: #92FFA2;
+}
+
+.UZScripts .categorycont .container .categories .category .cont .text {
+  position: absolute;
+  width: 3rem;
+  height: 0.875rem;
+  left: 0rem;
+  top: 2.15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.UZScripts .categorycont .container .categories .category .cont .text > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+  margin-top: .6rem;
+}
+
+.UZScripts .products {
+  -webkit-transition: all .24s ease-in;
+  transition: all .24s ease-in;
+  position: absolute;
+  width: 22.2rem;
+  height: 30.8rem;
+  left: 32.45rem;
+  top: 18.3rem;
+}
+
+.UZScripts .products .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 5.4375rem;
+  height: 1.875rem;
+  left: 1.0625rem;
+  top: calc(50% - 1.875rem / 2 - 14.4375rem);
+  background: radial-gradient(50% 138.64% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.063rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+}
+
+.UZScripts .products .header > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  text-align: center;
+  margin-top: .4rem;
+  letter-spacing: 0.00625em;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .products .line {
+  position: absolute;
+  width: 22rem;
+  height: 29.75rem;
+  left: 0.0625rem;
+  top: 0.9375rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.1);
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.UZScripts .products .listcont {
+  position: absolute;
+  width: 20.8rem;
+  height: 26.875rem;
+  left: 1.0625rem;
+  top: 2.8125rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.UZScripts .products .listcont::-webkit-scrollbar {
+  display: none;
+}
+
+.UZScripts .products .listcont .slot {
+  -webkit-transition: all .17s ease-in;
+  transition: all .17s ease-in;
+  -webkit-animation: slideUp .5s ease-in-out;
+          animation: slideUp .5s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  left: -0.525rem;
+  top: -0.525rem;
+  margin-top: 0.6rem;
+  margin-left: 0.6rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+}
+
+.UZScripts .products .listcont .slot:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+
+.UZScripts .products .listcont .slot:hover .price > p {
+  color: #92FFA2;
+}
+
+.UZScripts .products .listcont .slot .price {
+  position: absolute;
+  width: auto;
+  height: 0.75rem;
+  right: 0.3125rem;
+  top: 0.3125rem;
+}
+
+.UZScripts .products .listcont .slot .price > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.00625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .products .listcont .slot .img {
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../customize/water.png);
+}
+
+.UZScripts .cartpay {
+  -webkit-transition: all .24s ease-in;
+  transition: all .24s ease-in;
+  position: absolute;
+  width: 18.75rem;
+  height: 30.688rem;
+  left: 57.75rem;
+  top: 18.4rem;
+}
+
+.UZScripts .cartpay .cartcont {
+  position: absolute;
+  width: 18.75rem;
+  height: 20.375rem;
+  top: 0rem;
+  left: 0rem;
+}
+
+.UZScripts .cartpay .cartcont .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 3.125rem;
+  height: 1.875rem;
+  left: 1.0625rem;
+  background: radial-gradient(50% 138.64% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+  text-align: center;
+}
+
+.UZScripts .cartpay .cartcont .header > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.00625rem;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+  margin-top: .4rem;
+}
+
+.UZScripts .cartpay .cartcont .line {
+  position: absolute;
+  width: 18.625rem;
+  height: 20.3rem;
+  left: 0.0625rem;
+  top: 1rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.1);
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.UZScripts .cartpay .cartcont .itemcont {
+  position: absolute;
+  width: 19rem;
+  height: 18rem;
+  left: 1.0625rem;
+  top: 2.8rem;
+  overflow: scroll;
+}
+
+.UZScripts .cartpay .cartcont .itemcont::-webkit-scrollbar {
+  display: none;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos {
+  -webkit-transition: all .17s ease-in;
+  transition: all .17s ease-in;
+  -webkit-animation: slideUp .5s ease-in-out;
+          animation: slideUp .5s ease-in-out;
+  position: relative;
+  width: 16.625rem;
+  height: 3.75rem;
+  left: 0rem;
+  top: -0.625rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.1875rem;
+  margin-top: 0.625rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos:hover .name > p {
+  color: #92FFA2;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .cancel {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  right: .5rem;
+  top: 1.2rem;
+  background: rgba(255, 255, 255, 0.18);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.66);
+  border-radius: 0.3125rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .cancel .svg {
+  position: absolute;
+  width: 0.625rem;
+  height: 0.625rem;
+  left: 0.3125rem;
+  top: 0.3125rem;
+  background-image: url("./img/cancel.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .img {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: .55rem;
+  top: .55rem;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .name {
+  position: absolute;
+  width: 10rem;
+  height: 1.0625rem;
+  left: 3.7rem;
+  top: .9rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .name > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .price {
+  position: absolute;
+  width: 2.1875rem;
+  height: 0.6875rem;
+  left: 3.75rem;
+  top: 2rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .price > p {
+  font-family: 'Gilroyl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0rem 0rem 0.125rem #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .amountof {
+  width: auto;
+  height: 1rem;
+  right: 1rem;
+  top: 1.4rem;
+  position: absolute;
+}
+
+.UZScripts .cartpay .cartcont .itemcont .itemslos .amountof > p {
+  font-family: 'Gilroyl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0rem 0rem 0.125rem #FFFFFF;
+  margin-top: 0.05rem;
+}
+
+.UZScripts .cartpay .pay {
+  position: absolute;
+  width: 18.75rem;
+  height: 7.188rem;
+  left: 0rem;
+  bottom: 0rem;
+}
+
+.UZScripts .cartpay .pay .line {
+  position: absolute;
+  width: 18.625rem;
+  height: 6.125rem;
+  left: 0.063rem;
+  top: 1rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.1);
+  border-radius: 0.313rem;
+  overflow: hidden;
+}
+
+.UZScripts .cartpay .pay .header {
+  position: absolute;
+  width: 2.5rem;
+  height: 1.875rem;
+  left: 1.0625rem;
+  top: 0.0625rem;
+  background: radial-gradient(50% 138.64% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+  text-align: center;
+}
+
+.UZScripts .cartpay .pay .header > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+  margin-top: .35rem;
+}
+
+.UZScripts .cartpay .pay .paycont {
+  position: absolute;
+  width: 16.625rem;
+  height: 3.25rem;
+  left: 1.0625rem;
+  top: 2.875rem;
+}
+
+.UZScripts .cartpay .pay .paycont .totaltext {
+  position: absolute;
+  width: 4.3125rem;
+  height: 0.75rem;
+  left: 0rem;
+  top: 0rem;
+}
+
+.UZScripts .cartpay .pay .paycont .totaltext > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .cartpay .pay .paycont .amount {
+  position: absolute;
+  width: auto;
+  height: 0.75rem;
+  right: 0rem;
+  top: 0rem;
+}
+
+.UZScripts .cartpay .pay .paycont .amount > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .cartpay .pay .paycont .paycard, .UZScripts .cartpay .pay .paycont .paycash {
+  -webkit-transition: all .17s ease-in;
+  transition: all .17s ease-in;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 8.125rem;
+  height: 1.875rem;
+  left: 0rem;
+  top: 1.375rem;
+  border-radius: 0.1875rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+  border: 0.03125rem solid rgba(255, 255, 255, 0.1);
+}
+
+.UZScripts .cartpay .pay .paycont .paycard:hover, .UZScripts .cartpay .pay .paycont .paycash:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  background: radial-gradient(50% 138.64% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .cartpay .pay .paycont .paycard:hover > p, .UZScripts .cartpay .pay .paycont .paycash:hover > p {
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .cartpay .pay .paycont .paycard > p, .UZScripts .cartpay .pay .paycont .paycash > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0rem 0rem 0.625rem rgba(255, 255, 255, 0.2);
+}
+
+.UZScripts .cartpay .pay .paycont .paycash {
+  left: 8.5rem;
+}
+
+.UZScripts .recent {
+  -webkit-transition: all .24s ease-in;
+  transition: all .24s ease-in;
+  position: absolute;
+  width: 18.75rem;
+  height: 30.6875rem;
+  right: 21.6rem;
+  top: 18.4rem;
+}
+
+.UZScripts .recent .line {
+  position: absolute;
+  width: 18.625rem;
+  height: 29.625rem;
+  left: 0.0625rem;
+  top: 1rem;
+  border: 0.125rem dashed rgba(255, 255, 255, 0.1);
+  border-radius: 0.3125rem;
+}
+
+.UZScripts .recent .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  width: 4.125rem;
+  height: 1.875rem;
+  left: 1.0625rem;
+  top: 0rem;
+  background: radial-gradient(50% 138.64% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  border-radius: 0.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.UZScripts .recent .header > p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #92FFA2;
+  text-shadow: 0rem 0rem 0.625rem rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .recent .list {
+  position: absolute;
+  width: 16.625rem;
+  height: 26.75rem;
+  left: 1.0625rem;
+  top: 2.875rem;
+  overflow: scroll;
+}
+
+.UZScripts .recent .list::-webkit-scrollbar {
+  display: none;
+}
+
+.UZScripts .recent .list .recentitem {
+  -webkit-animation: slideUp .5s ease-in-out;
+          animation: slideUp .5s ease-in-out;
+  margin-top: 0.625rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 16.625rem;
+  height: 2.0625rem;
+  left: 0rem;
+  top: -.625rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .14s ease-in;
+  transition: all .14s ease-in;
+}
+
+.UZScripts .recent .list .recentitem:hover {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(146, 255, 162, 0.16) 0%, rgba(146, 255, 162, 0) 100%), rgba(146, 255, 162, 0.1);
+  border: 0.0625rem solid rgba(146, 255, 162, 0.2);
+  height: 8.25rem;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.UZScripts .recent .list .recentitem:hover .headerid {
+  color: #92FFA2;
+}
+
+.UZScripts .recent .list .recentitem:hover .headerid p {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+
+.UZScripts .recent .list .recentitem:hover .headerid p::after {
+  content: '';
+  position: absolute;
+  bottom: 0.05rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 70%;
+  height: 0.0625rem;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.UZScripts .recent .list .recentitem:hover .itemshow {
+  opacity: 1;
+  max-height: 3.5rem;
+  overflow-y: scroll;
+  margin-top: 0.4rem;
+}
+
+.UZScripts .recent .list .recentitem:hover .recent-item-actions {
+  opacity: 1;
+  bottom: 0.5rem;
+}
+
+.UZScripts .recent .list .recentitem .headerid {
+  font-family: 'Gilroyl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+}
+
+.UZScripts .recent .list .recentitem .itemshow {
+  width: 14.125rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  -webkit-transition: max-height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+  transition: max-height .3s ease-in-out, opacity .3s ease-in-out, margin-top .3s ease-in-out;
+}
+
+.UZScripts .recent .list .recentitem .itemshow::-webkit-scrollbar {
+  display: none;
+}
+
+.UZScripts .recent .list .recentitem .itemshow .items {
+  position: relative;
+  width: 14.5rem;
+  height: 0.625rem;
+  left: 0rem;
+  top: -0.313rem;
+  margin-top: 0.313rem;
+}
+
+.UZScripts .recent .list .recentitem .itemshow .items .name {
+  position: absolute;
+  width: auto;
+  height: 0.625rem;
+  left: 0rem;
+  top: 0rem;
+}
+
+.UZScripts .recent .list .recentitem .itemshow .items .name > p {
+  font-family: 'Gilroyl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .recent .list .recentitem .itemshow .items .amount {
+  position: absolute;
+  width: auto;
+  height: 0.625rem;
+  right: .5rem;
+  top: 0rem;
+}
+
+.UZScripts .recent .list .recentitem .itemshow .items .amount > p {
+  font-family: 'Gilroyl';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 0rem;
+}
+
+.UZScripts .recent .list .recentitem .recent-item-actions {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out, bottom .3s ease-in-out;
+  transition: opacity .3s ease-in-out, bottom .3s ease-in-out;
+  width: auto;
+}
+
+.UZScripts .recent .list .recentitem .recent-item-actions .cart-icon, .UZScripts .recent .list .recentitem .recent-item-actions .up-arrow-icon {
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.1875rem;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.UZScripts .recent .list .recentitem .recent-item-actions .cart-icon:hover, .UZScripts .recent .list .recentitem .recent-item-actions .up-arrow-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: rgba(146, 255, 162, 0.1);
+  border-color: rgba(146, 255, 162, 0.2);
+}
+
+.UZScripts .recent .list .recentitem .recent-item-actions .cart-icon:hover i, .UZScripts .recent .list .recentitem .recent-item-actions .up-arrow-icon:hover i {
+  color: #92FFA2;
+}
+
+.UZScripts .recent .list .recentitem .recent-item-actions .cart-icon i, .UZScripts .recent .list .recentitem .recent-item-actions .up-arrow-icon i {
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=style.css.map */

@@ -2,74 +2,35 @@ function SendMessage(action, data) SendNUIMessage({ action = action, data = data
 
 -- Start operations
 Citizen.CreateThread(function()
-    for _, shop in pairs(Customize.Locations) do
-        if shop.interactType == 'target' then
-            Services:Interact(shop)
+    for locationName, coords in pairs(locationsConfig) do
+        for index = 1, #coords do
+            Services:Interact(locationName, coords[index])
         end
     end
 end) 
-
--- ═══════════════════════════════════════════════════════════════════════════════════
--- MAIN MARKER AND INTERACTION THREAD
--- ═══════════════════════════════════════════════════════════════════════════════════
-
-Citizen.CreateThread(function()
-    while true do
-        local Sleep = 2000
-        
-        if not IsNuiFocused() then
-            local PlayerPed = PlayerPedId()
-            local PlayerCoord = GetEntityCoords(PlayerPed)
-            
-            for _, shop in pairs(Customize.Locations) do
-                local markerCoords = shop.coords
-                local distance = #(PlayerCoord - vector3(markerCoords.x, markerCoords.y, markerCoords.z))
-                
-                if distance < 7.0 then
-                    Sleep = 4
-                    
-                    -- For non-target interactions
-                    if shop.interactType ~= 'target' then
-                        Services:Interact(shop)
-                    end
-                    
-                    -- Interaction distance check
-                    if distance < 1.5 and shop.interactType ~= 'target' then
-                        -- Display information on screen
-                        Services:Drawtext(shop)
-                        
-                        -- Press E
-                        if IsControlJustReleased(0, 38) then
-                            Shop:Open(shop)
-                        end
-                    end
-                end
-            end
-        else
-            Sleep = 1000
-        end
-        
-        Citizen.Wait(Sleep)
-    end
-end)
 
 -- ═══════════════════════════════════════════════════════════════════════════════════
 -- BLIP 
 -- ═══════════════════════════════════════════════════════════════════════════════════
 
 Citizen.CreateThread(function()
-    for _, shop in pairs(Customize.Locations) do
-        if not shop?.blip?.hide then
-            local blip = AddBlipForCoord(shop.coords)
-            SetBlipSprite(blip, shop.blip.id or 225)
-            SetBlipDisplay(blip, 4)
-            SetBlipScale(blip, shop.blip.scale or 0.8)
-            SetBlipColour(blip, shop.blip.color or 0)
-            SetBlipAsShortRange(blip, true)
-            
-            BeginTextCommandSetBlipName("STRING")
-            AddTextComponentString(shop.label)
-            EndTextCommandSetBlipName(blip)
+    for typeName, shop in pairs(config) do
+        for locationName, coords in pairs(locationsConfig) do
+            if locationName == typeName then
+                if not shop?.blip?.hide then
+                    local blip = AddBlipForCoord(locationName[coords])
+                    SetBlipSprite(blip, shop.blip.id or 225)
+                    SetBlipDisplay(blip, 4)
+                    SetBlipScale(blip, shop.blip.scale or 0.8)
+                    SetBlipColour(blip, shop.blip.color or 0)
+                    SetBlipAsShortRange(blip, true)
+                    
+                    BeginTextCommandSetBlipName("STRING")
+                    AddTextComponentString(shop.label)
+                    EndTextCommandSetBlipName(blip)
+                    TriggerEvent('radialmenu:registerToggleableBlip', blip, 'shops')
+                end
+            end
         end
     end
 end)
@@ -80,16 +41,22 @@ end)
 ShopPed = {}
 
 Citizen.CreateThread(function()
-    for index, data in pairs(Customize.Locations) do
+    for index, data in pairs(config) do
         if data?.npc?.showped then
-            local current = type(data?.npc?.ped) == 'number' and data?.npc?.ped or joaat(data?.npc?.ped)
-            RequestModel(current)
-            while not HasModelLoaded(current) do Wait(0) end
-            ShopPed[data.coords] = CreatePed(0, current, data.coords.x, data.coords.y, data.coords.z - 1, data.coords.w, false, false)
-            TaskStartScenarioInPlace(ShopPed[data.coords], data?.npc?.scenario, 0, true)
-            FreezeEntityPosition(ShopPed[data.coords], true)
-            SetEntityInvincible(ShopPed[data.coords], true)
-            SetBlockingOfNonTemporaryEvents(ShopPed[data.coords], true)
+            for locationName, coords in pairs(locationsConfig) do
+                if data.type == locationName then
+                    for i, coords in ipairs(coords) do 
+                        local current = type(data?.npc?.ped) == 'number' and data?.npc?.ped or joaat(data?.npc?.ped)
+                        RequestModel(current)
+                        while not HasModelLoaded(current) do Wait(0) end
+                        ShopPed[coords] = CreatePed(0, current, coords.x, coords.y, coords.z - 1.0, coords.w, false, false)
+                        TaskStartScenarioInPlace(ShopPed[coords], data?.npc?.scenario, 0, true)
+                        FreezeEntityPosition(ShopPed[coords], true)
+                        SetEntityInvincible(ShopPed[coords], true)
+                        SetBlockingOfNonTemporaryEvents(ShopPed[coords], true)
+                    end
+                end
+            end
         end
     end
 end)
@@ -111,7 +78,6 @@ end)
 
 local function detectInventoryImagePath()
     local imagePaths = {
-        ["qb-inventory"] = "nui://qb-inventory/html/images/",
         ["ox_inventory"] = "nui://ox_inventory/web/images/",
     }
 
@@ -119,7 +85,6 @@ local function detectInventoryImagePath()
     for inventoryName, path in pairs(imagePaths) do
         if GetResourceState(inventoryName) == "started" then
             Customize.ImagePath = path
-            print("^2Inventory detected: " .. inventoryName .. ", image path set to: " .. path .. "^0")
             return true
         end
     end
@@ -148,6 +113,6 @@ local function processCategory(category, categoryType)
 end
 
 -- Process all categories and their products
-for categoryType, category in pairs(Customize.Category) do
+for categoryType, category in pairs(categoriesConfig) do
     processCategory(category, categoryType)
 end
